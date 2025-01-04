@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #000000;
+            color: #ffffff;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4285F4;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #121212;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input, textarea {
+            background: #1a1a1a;
+            color: #ffffff;
+        }
+
+        button {
+            background: #4285F4;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1a73e8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <form action="/submit_contact" method="POST">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+</body>
+</html>
